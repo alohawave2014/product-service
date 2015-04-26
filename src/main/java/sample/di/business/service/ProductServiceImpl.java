@@ -17,9 +17,10 @@ public class ProductServiceImpl implements ProductService {
         return productDao.findProduct(name);
     }
 
-    public void setProductDao(ProductDao productDao) {
-        this.productDao = productDao;
-    }
+    // applicationContext.xmlで bean定義する場合は、必要
+//    public void setProductDao(ProductDao productDao) {
+//        this.productDao = productDao;
+//    }
 
     
 }

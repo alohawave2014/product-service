@@ -26,7 +26,7 @@ public class ProductServiceRun {
     }
 
     private void execute() {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("META-INF/applicationContext.xml");
         
         ProductService producService = ctx.getBean(ProductService.class);
         Product product = producService.findProduct("hoge");
@@ -34,6 +34,8 @@ public class ProductServiceRun {
         
         MessageService messageService = ctx.getBean(MessageService.class);
         log.info("MessageService : {}", messageService.getMessage());
+        
+        ((ClassPathXmlApplicationContext)ctx).close();
     }
 
 }

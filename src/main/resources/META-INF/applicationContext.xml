@@ -31,7 +31,7 @@
 	<bean id="ProductDao" class="sample.di.business.dataaccess.ProductDaoImpl" />
 	 -->
 	
-	<util:properties id="msgProperties" location="classpath:message.properties" />
+	<util:properties id="msgProperties" location="classpath:META-INF/message.properties" />
 	<!--  -->
 	<context:component-scan base-package="sample.di" scoped-proxy="targetClass"/>
 
