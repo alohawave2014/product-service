@@ -8,20 +8,17 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.core.io.ClassPathResource;
 
-//@Configuration
-//@ComponentScan("sample.di")
 //@PropertySource("classpath:META-INF/message.properties")
+@Configuration
+@ComponentScan("sample.di")
 public class AppConfig {
 
-//    @Bean(name = "msgProperties")
+    @Bean(name="msgProperties")
     public PropertiesFactoryBean msgProperties() {
         PropertiesFactoryBean bean = new PropertiesFactoryBean();
-        bean.setLocation(new ClassPathResource("classpath:META-INF/message.properties"));
+        //bean.setLocation(new ClassPathResource("classpath:META-INF/message.properties"));
+        bean.setLocation(new ClassPathResource("META-INF/message.properties"));
         return bean;
     }
     
-//    @Bean
-    public static PropertySourcesPlaceholderConfigurer propertyPlaceholderConfigurer() {
-        return new PropertySourcesPlaceholderConfigurer();
-    }
 }

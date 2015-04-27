@@ -32,7 +32,7 @@
 
 	<!--  ProductServiceに ProductDaoをAutoWiredでInjectする場合は必要	
 	<bean id="ProductService" class="sample.di.business.service.ProductServiceImpl" autowire="byType" />
-	<bean id="ProductDao" class="sample.di.business.dataaccess.ProductDaoImpl" />
+	<bean id="ProductDao" class="sample.di.business.dataaccess.ProductDaoImpl" />	
 	 -->
 	<!--  
 	<context:component-scan base-package="sample.di" scoped-proxy="targetClass"/>
